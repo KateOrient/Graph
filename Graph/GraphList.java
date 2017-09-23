@@ -1,5 +1,6 @@
 package Graph;
 
+import java.awt.*;
 import java.io.*;
 import java.util.*;
 
@@ -92,6 +93,12 @@ public class GraphList extends Graph {
     public String getStorageType() {
         return "List";
     }
+
+    @Override
+    public void draw(String fileName) throws IOException{}
+
+    @Override
+    protected  void drawEdge(Graphics2D graph, double angle, Color c){}
 
     public Graph changeStorageType() throws IOException {
         return new GraphMatrix(this);
